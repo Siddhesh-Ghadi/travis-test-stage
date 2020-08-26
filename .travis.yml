@@ -7,14 +7,14 @@ jobs:
     - stage: "MTU Test"
       name: "Xenial Test"
       dist: xenial
-      script: ./tests/mtu-test.sh
+      script: bash ./tests/mtu-test.sh
     - name: "Bionic Test"
       dist: bionic
-      script: ./tests/mtu-test.sh
+      script: bash ./tests/mtu-test.sh
     - stage: APT Install Test
       name: "Xenial Test"
       dist: xenial
-      script: ./tests/apt-install-test.sh
+      script: bash ./tests/apt-install-test.sh
     - name: "Bionic Test"
       dist: bionic
-      script: ./tests/apt-install-test.sh
+      script: bash ./tests/apt-install-test.sh
