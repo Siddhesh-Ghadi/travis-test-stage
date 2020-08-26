@@ -1,18 +1,20 @@
 arch: ppc64le
+sudo: required
+service: docker
 
 jobs:
   include:
     - stage: "MTU Test"
       name: "Xenial Test"
       dist: xenial
-      script: ./mtu-test.sh
+      script: ./tests/mtu-test.sh
     - name: "Bionic Test"
       dist: bionic
-      script: ./mtu-test.sh
+      script: ./tests/mtu-test.sh
     - stage: APT Install Test
       name: "Xenial Test"
       dist: xenial
-      script: ./apt-install-test.sh
+      script: ./tests/apt-install-test.sh
     - name: "Bionic Test"
       dist: bionic
-      script: ./apt-install-test.sh
+      script: ./tests/apt-install-test.sh
