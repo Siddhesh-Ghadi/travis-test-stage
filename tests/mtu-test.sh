@@ -1,5 +1,5 @@
 #!/bin/bash
-set -x
+set -ex
 ifconfig
 cat /etc/docker/daemon.json
 curl https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda/linux-ppc64le/current_repodata.json > log.txt
