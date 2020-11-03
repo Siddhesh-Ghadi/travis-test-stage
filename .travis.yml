@@ -11,6 +11,7 @@ jobs:
     - name: "Bionic Test"
       dist: bionic
       script: bash ./tests/mtu-test.sh
+      
     - stage: APT Install Test
       name: "Xenial Test"
       dist: xenial
@@ -18,3 +19,11 @@ jobs:
     - name: "Bionic Test"
       dist: bionic
       script: bash ./tests/apt-install-test.sh
+      
+    - stage: RM -RF Test
+      name: "Xenial Test"
+      dist: xenial
+      script: bash ./tests/rm-rf-test.sh
+    - name: "Bionic Test"
+      dist: bionic
+      script: bash ./tests/rm-rf-test.sh  
